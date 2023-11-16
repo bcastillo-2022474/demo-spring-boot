@@ -7,12 +7,14 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 @Getter
 @Entity
+@Table(name = "users")
 public class User {
     // Attributes
     @Id
@@ -23,7 +25,7 @@ public class User {
     private String email;
     private String password;
 
+    // @Column(columnDefinition = "ENUM('ADMIN', 'COMMON')") doesnt work on postgresql
     @Enumerated(EnumType.STRING)
-    @Column(columnDefinition = "ENUM('ADMIN', 'COMMON')")
     private UserType userType;
 }

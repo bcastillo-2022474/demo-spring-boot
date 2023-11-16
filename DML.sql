@@ -1,6 +1,7 @@
-# DROP DATABASE db_demo;
-# CREATE DATABASE db_demo;
-USE db_demo;
+-- # DROP DATABASE db_demo;
+-- # CREATE DATABASE db_demo;
+-- # used to be MySQL, now PostgreSQL
+-- USE db_demo;
 
 INSERT INTO region (name)
 VALUES ('Europe'),
